@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Smartx</title>
+
+    <link rel="shortcut icon" href="static/img/favicon.ico"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113878921-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113878921-4');
+    </script>
+
+
+    <!--ACE Editor -->
+    <script type="text/javascript" src="https://ace.c9.io/build/src/ace.js"></script>
+    <script type="text/javascript" src="https://ace.c9.io/build/src/ext-language_tools.js"></script>
+    <!-- vue-cookies -->
+    <script src="https://unpkg.com/vue-cookies@1.5.5/vue-cookies.js"></script>
+
+     <script type="text/javascript">
+         function getBrowserInfo(){
+             var Sys = {};
+             var ua = navigator.userAgent.toLowerCase();
+             var re =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+             var m = ua.match(re);
+             Sys.browser = m[1].replace(/version/, "'safari");
+             Sys.ver = m[2];
+             Sys.isMobile = (ua.indexOf('mobile') > -1) ? true:false
+             return Sys;
+         }
+        
+        var sys = getBrowserInfo();
+        if(sys.browser !== 'chrome' || sys.isMobile) {
+          var msg = 'Please open SmartX in Chrome desktop';
+          alert(msg);
+          document.write(msg)
+        }
+     </script>
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
+<style>
+  html,body{
+    height: 100%;
+    width: 100%;
+  }
+</style>
